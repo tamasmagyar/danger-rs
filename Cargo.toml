@@ -1,6 +1,6 @@
 [package]
 name = "danger-rs"
-version = "0.1.0"
+version = "0.1.1"
 description = "Automate your code review process with Rust"
 edition = "2021"
 license = "MIT"
@@ -8,5 +8,9 @@ repository = "https://github.com/tamasmagyar/danger-rs"
 readme = "README.md"
 keywords = ["code-review", "ci", "automation", "danger"]
 categories = ["development-tools"]
+
+[[bin]]
+name = "danger-rs"
+path = "src/main.rs"
 
 [dependencies]
