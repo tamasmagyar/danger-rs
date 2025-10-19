@@ -20,8 +20,9 @@ path = "src/main.rs"
 [dependencies]
 serde = { version = "1.0", features = ["derive"] }
 serde_json = "1.0"
-reqwest = { version = "0.11", features = ["json"] }
-tokio = { version = "1.0", features = ["full"] }
 clap = { version = "4.0", features = ["derive"] }
-git2 = "0.18"
+git2 = { version = "0.17", features = ["vendored-libgit2"] }
 thiserror = "1.0"
+tokio = { version = "1.0", features = ["full"] }
+gitlab = "0.1804.0"
+

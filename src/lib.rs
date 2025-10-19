@@ -1,10 +1,12 @@
 pub mod danger;
 pub mod message;
 pub mod runner;
+pub mod gitlab;
 
 pub use danger::Danger;
 pub use message::{DangerMessage, MessageType};
 pub use runner::{CiPlatform, DangerContext};
+pub use gitlab::GitLabClient;
 
 pub fn run_danger() -> Result<(), Box<dyn std::error::Error>> {
     let context = runner::DangerContext::detect()?;
