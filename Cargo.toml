@@ -1,16 +1,27 @@
 [package]
 name = "danger-rs"
-version = "0.1.1"
-description = "Automate your code review process with Rust"
+version = "0.2.0"
+description = "Automate your code review process with Rust - DangerJS alternative"
 edition = "2021"
 license = "MIT"
 repository = "https://github.com/tamasmagyar/danger-rs"
 readme = "README.md"
-keywords = ["code-review", "ci", "automation", "danger"]
+keywords = ["code-review", "ci", "automation", "danger", "github-actions"]
 categories = ["development-tools"]
+
+[lib]
+name = "danger_rs"
+path = "src/lib.rs"
 
 [[bin]]
 name = "danger-rs"
 path = "src/main.rs"
 
 [dependencies]
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+reqwest = { version = "0.11", features = ["json"] }
+tokio = { version = "1.0", features = ["full"] }
+clap = { version = "4.0", features = ["derive"] }
+git2 = "0.18"
+thiserror = "1.0"
